@@ -7,6 +7,7 @@
     --bg-color-secondary: #CCCCED;
     --nav-color: #5C5D98;
     --color-details: #EDC213;
+
     --text-color: #FFF9DC;
     --text-color-secondary: #000000;
     --text-color-details: #FFFFFF;
@@ -25,111 +26,172 @@
     --space-3: 1.5rem;
     --space-4: 2rem;
     --space-5: 3rem;
-
-
 }
 
+/* =========================================
+   MODO ESCURO
+   ========================================= */
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body.dark-mode {
+    --bg-color: #17172A;
+    --bg-color-secondary: #252545;
+    --nav-color: #30305C;
+    --color-details: #EDC213;
+
+    --text-color: #FFF9DC;
+    --text-color-secondary: #FFFFFF;
+    --text-color-details: #FFFFFF;
+    --text-color-details-secondary: #CCCCCC;
 }
-body{
+
+/* =========================================
+   BOTÃO MODO ESCURO
+   ========================================= */
+
+#dark-mode-toggle {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border: 2px solid var(--color-details);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#dark-mode-toggle:hover {
+    background-color: var(--color-details);
+    color: var(--text-color-secondary);
+}
+
+#dark-mode-toggle:focus-visible {
+    outline: 3px solid var(--color-details);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================= */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
     background-color: var(--bg-color);
+    color: var(--text-color-secondary);
     font-family: 'Barlow', sans-serif;
-    display:grid;
-    margin:0;
+    display: grid;
+    margin: 0;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto 1fr auto;
-
-
-
 }
 
-header nav{
+/* =========================================
+   HEADER E NAVEGAÇÃO
+   ========================================= */
+
+header nav {
     position: sticky;
     top: 0;
 }
-nav{
-    margin:0;
-    background-color:var(--nav-color);
-    display:flex;
+
+nav {
+    margin: 0;
+    background-color: var(--nav-color);
+    display: flex;
     flex-direction: row;
     align-items: center;
     font-size: var(--font-size-md);
-   
-
-
-
 }
 
-nav a{
+nav a {
     padding: var(--space-2);
     width: auto;
     text-align: left;
     text-decoration: none;
-    color:var(--color-details);
+    color: var(--color-details);
 }
 
-
-nav img{
+nav img {
     width: 200px;
 }
+
 header {
     display: flex;
     flex-direction: column;
-    grid-column:1/-1;
-    
-
+    grid-column: 1 / -1;
 }
-header img.banner{
+
+header img.banner {
     width: 100%;
     height: auto;
     max-height: 650px;
     object-fit: cover;
     margin-top: 0;
 }
-header h1{
+
+header h1 {
     text-align: center;
     font-size: var(--font-size-xl);
-    color:var(--nav-color);
+    color: var(--text-color-secondary);
     margin-top: var(--space-2);
     margin-bottom: var(--space-2);
 }
-header h1:hover{
-    color:var(--color-details);
+
+header h1:hover {
+    color: var(--color-details);
     transition: 0.3s;
 }
+
+/* =========================================
+   CONTEÚDO PRINCIPAL
+   ========================================= */
+
 main {
     display: flex;
     flex-direction: column;
     padding: var(--space-2);
-    margin:var(--space-2);
-    grid-column:1/-1;
-
+    margin: var(--space-2);
+    grid-column: 1 / -1;
 }
-.hero{
+
+.hero {
     display: flex;
     flex-direction: column;
-    grid-column:1/-1;
-
+    grid-column: 1 / -1;
 }
 
-main h2{
+main h2 {
     font-size: var(--font-size-lg);
-    color:var(--nav-color);
+    color: var(--text-color-secondary);
     margin-top: var(--space-2);
     margin-bottom: var(--space-2);
 }
-main p{
+
+main h3 {
+    color: var(--text-color-secondary);
+}
+
+main p {
     font-size: var(--font-size-md);
-    color:var(--text-color-secondary);
+    color: var(--text-color-secondary);
     margin-top: var(--space-2);
     margin-bottom: var(--space-2);
 }
-.projetos{
-    display:grid;
+
+main li {
+    color: var(--text-color-secondary);
+}
+
+/* =========================================
+   PROJETOS
+   ========================================= */
+
+.projetos {
+    display: grid;
     width: 100%;
     height: auto;
     margin-top: var(--space-2);
@@ -137,60 +199,72 @@ main p{
     grid-template-columns: repeat(2, 1fr);
 }
 
-#educacao{
-    display:flex;
+#educacao {
+    display: flex;
     flex-direction: column;
     padding: var(--space-2);
     grid-column: 1;
 }
-#comunidade{
-    display:flex;
+
+#comunidade {
+    display: flex;
     flex-direction: column;
     padding: var(--space-2);
-    grid-column:2;
+    grid-column: 2;
 }
+
 .experiencias {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-2);
     grid-column: 1 / -1;
 }
-.experienciatitle{
-    display:flex;
+
+.experienciatitle {
+    display: flex;
     flex-direction: column;
     grid-column: 1 / -1;
 }
-.experiencia1{
-    display:flex;
+
+.experiencia1 {
+    display: flex;
     flex-direction: column;
     padding: var(--space-2);
     grid-column: 1;
 }
-.experiencia2{
-    display:flex;
+
+.experiencia2 {
+    display: flex;
     flex-direction: column;
     padding: var(--space-2);
     grid-column: 2;
 }
-.apoio{
-    display:flex;
+
+.apoio {
+    display: flex;
     flex-direction: column;
     padding: var(--space-2);
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     width: 100%;
 }
-.doacao{
-    display:flex;
-    flex-direction: column;
-    padding: var(--space-2);
-}
-#voluntariado{
-    display:flex;
+
+.doacao {
+    display: flex;
     flex-direction: column;
     padding: var(--space-2);
 }
 
-.laptop{
+#voluntariado {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-2);
+}
+
+/* =========================================
+   IMAGENS
+   ========================================= */
+
+.laptop {
     width: auto;
     max-width: 500px;
     max-height: 500px;
@@ -198,6 +272,20 @@ main p{
     margin-top: var(--space-2);
     margin-bottom: var(--space-2);
 }
+
+.cracha {
+    width: auto;
+    max-width: 500px;
+    max-height: 500px;
+    height: 500px;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+/* =========================================
+   BADGES
+   ========================================= */
+
 .badge {
     display: inline-block;
     background-color: var(--color-details);
@@ -208,14 +296,30 @@ main p{
     font-weight: bold;
     width: fit-content;
 }
+
+/* =========================================
+   ALERTA
+   ========================================= */
+
 .alert {
     background-color: var(--bg-color-secondary);
-    color: var(--nav-color);
+    color: var(--text-color-secondary);
     border-left: 5px solid var(--color-details);
     padding: var(--space-2);
     margin: var(--space-2) 0;
     border-radius: 8px;
 }
+
+.alert h3,
+.alert p,
+.alert li {
+    color: var(--text-color-secondary);
+}
+
+/* =========================================
+   TOAST
+   ========================================= */
+
 .toast {
     visibility: hidden;
     background-color: var(--nav-color);
@@ -233,8 +337,13 @@ main p{
     visibility: visible;
     opacity: 1;
 }
-.cadastro{
-    display:flex;
+
+/* =========================================
+   CADASTRO E FORMULÁRIO
+   ========================================= */
+
+.cadastro {
+    display: flex;
     flex-wrap: wrap;
     max-width: 500px;
     width: 100%;
@@ -242,40 +351,57 @@ main p{
     margin-top: var(--space-2);
     margin-bottom: var(--space-2);
     text-align: center;
-    outline:none;
+    outline: none;
     transition: all 0.3s ease;
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
 }
 
 form {
     background-color: var(--bg-color-secondary);
+    color: var(--text-color-secondary);
     border-radius: 10px;
     padding: var(--space-2);
-    margin:var(--space-2);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+    margin: var(--space-2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+form label,
+form legend,
+form p {
+    color: var(--text-color-secondary);
+}
+
 .forminput {
-width:100%;
-padding:12px 15px;
-border:2px solid #5C5D98;
-border-radius:8px;
-outline:none;
-transition: all 0.3s ease;
-font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--nav-color);
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--bg-color);
+    color: var(--text-color-secondary);
+}
 
+.forminput::placeholder {
+    color: var(--text-color-secondary);
+    opacity: 0.7;
 }
+
 .forminput:focus {
-    border-color:var(--color-details);
-    box-shadow:#5C5D98;
+    border-color: var(--color-details);
+    box-shadow: 0 0 5px var(--nav-color);
 }
+
 .forminput:valid {
     border-color: var(--color-details);
 }
+
 .forminput:invalid {
     border-color: red;
 }
-form button{
+
+form button {
     background-color: var(--nav-color);
     color: var(--text-color);
     border: none;
@@ -283,41 +409,45 @@ form button{
     border-radius: 5px;
     cursor: pointer;
 }
-form button:hover{
-    background-color: var(--text-color-secondary);
-    color: var(--text-color-details);
+
+form button:hover {
+    background-color: var(--color-details);
+    color: var(--text-color-secondary);
     transition: 0.3s;
 }
-.cracha{
-    width: auto;
-    max-width:500px;
-    max-height: 500px;
-    height: 500px;
-    margin-top: var(--space-2);
-    margin-bottom: var(--space-2);
-}
 
-footer{
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
     background-color: var(--nav-color);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content:space-around;
+    justify-content: space-around;
     padding: var(--space-2);
-        grid-column:1/-1;
-
-
+    grid-column: 1 / -1;
 }
-footer img{
+
+footer img {
     width: 30px;
     height: 30px;
     margin-right: var(--space-2);
 }
 
-nav a:hover{
-    color:var(--text-color-details-secondary);
+footer p {
+    color: var(--text-color);
+}
+
+nav a:hover {
+    color: var(--text-color-details-secondary);
     transition: 0.3s;
 }
+
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================= */
 
 * {
     box-sizing: border-box;
@@ -335,6 +465,11 @@ main,
 #voluntariado {
     min-width: 0;
 }
+
+/* =========================================
+   MENU
+   ========================================= */
+
 #menu-toggle {
     display: none;
 }
@@ -348,25 +483,33 @@ main,
     flex-direction: row;
     align-items: center;
 }
-/* DROPDOWN */ 
-.dropdown { 
+
+/* =========================================
+   DROPDOWN
+   ========================================= */
+
+.dropdown {
     position: relative;
-} 
-.dropdown-content { 
-    display: none; 
-    position: absolute; 
-    background-color: var(--nav-color); 
-    min-width: 180px; 
-} 
-.dropdown-content a 
-{ display: block; 
-    width: 100%; 
-} 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--nav-color);
+    min-width: 180px;
+}
+
+.dropdown-content a {
+    display: block;
+    width: 100%;
+}
+
 #submenu-toggle:checked ~ .dropdown-content {
     display: flex;
     flex-direction: column;
 }
-    #submenu-toggle {
+
+#submenu-toggle {
     display: none;
 }
 
@@ -375,6 +518,29 @@ main,
     color: var(--color-details);
     cursor: pointer;
 }
+
+/* =========================================
+   ACESSIBILIDADE - FOCO PELO TECLADO
+   ========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+label:focus-visible {
+    outline: 3px solid var(--color-details);
+    outline-offset: 3px;
+}
+
+form button:focus-visible {
+    outline: 3px solid var(--color-details);
+    outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
 @media screen and (max-width: 1200px) {
 
     .projetos {
@@ -392,7 +558,6 @@ main,
         width: 100%;
         max-width: 100%;
     }
-
 }
 
 @media screen and (max-width: 992px) {
@@ -416,7 +581,6 @@ main,
     header h1 {
         font-size: var(--font-size-lg);
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -447,7 +611,6 @@ main,
     header h1 {
         font-size: var(--font-size-lg);
     }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -497,7 +660,8 @@ main,
     main p {
         font-size: var(--font-size-sm);
     }
-.menu-icon {
+
+    .menu-icon {
         display: block;
         cursor: pointer;
         font-size: var(--font-size-lg);
@@ -514,10 +678,11 @@ main,
     #menu-toggle:checked ~ .nav-links {
         display: flex;
     }
+
     .dropdown-content {
-    position: static;
-    width: 100%;
-}
+        position: static;
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -576,5 +741,4 @@ main,
     footer {
         justify-content: center;
     }
-
 }
