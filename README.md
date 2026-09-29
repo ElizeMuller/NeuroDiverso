@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <a href="https://elizemuller.github.io/NeuroDiverso/">
-    <img alt="NeuroDiverso" src="https://i.imgur.com/SEU_LOGO_AQUI.png" />
+    <img alt="NeuroDiverso" src="https://raw.githubusercontent.com/ElizeMuller/NeuroDiverso/refs/heads/develop/Img/logo-sem-fundo.png" />
   </a>
   <br>
 </h1>
