@@ -44,9 +44,9 @@ body.dark-mode {
     --text-color-details-secondary: #CCCCCC;
 }
 
-/* =========================================
+/* ========================================
    BOTÃO MODO ESCURO
-   ========================================= */
+   ======================================== */
 
 #dark-mode-toggle {
     background-color: var(--nav-color);
