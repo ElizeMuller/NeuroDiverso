@@ -11,11 +11,11 @@
 
   <img alt="Projeto" src="https://img.shields.io/badge/Projeto-NeuroDiverso-purple">
 
-  <img alt="HTML" src="https://img.shields.io/badge/HTML-56.2%25-orange">
+  <img alt="HTML" src="https://img.shields.io/badge/HTML-48%25-orange">
 
-  <img alt="CSS" src="https://img.shields.io/badge/CSS-42.5%25-blue">
+  <img alt="CSS" src="https://img.shields.io/badge/CSS-48.1%25-blue">
 
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-1.3%25-yellow">
+  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-3.9%25-yellow">
 
 </p>
 
@@ -49,9 +49,9 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 
 ### Linguagens utilizadas
 
-- [**HTML**](https://github.com/ElizeMuller/NeuroDiverso/search?l=html) - 56.2%
-- [**CSS**](https://github.com/ElizeMuller/NeuroDiverso/search?l=css) - 42.5%
-- [**JavaScript**](https://github.com/ElizeMuller/NeuroDiverso/search?l=javascript) - 1.3%
+- [**HTML**](https://github.com/ElizeMuller/NeuroDiverso/search?l=html) - 48%
+- [**CSS**](https://github.com/ElizeMuller/NeuroDiverso/search?l=css) - 48.1%
+- [**JavaScript**](https://github.com/ElizeMuller/NeuroDiverso/search?l=javascript) - 3.9%
 
 ---
 
